@@ -8,8 +8,8 @@ This is a sample React Application which interactes with TMDB Api.
 
 Week One
 
-- ☑️ Build reusable components with props;
-- ☑️ Provide unit tests.
+- ✅ Build reusable components with props;
+- ✅ Provide unit tests.
 - ☑️ Implement a local state for a component;
 - ☑️ Handle a click event anywhere;
 - ✅ Use dynamic content from an API;

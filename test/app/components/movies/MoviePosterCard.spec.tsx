@@ -9,14 +9,14 @@ describe('MoviePosterCard', () => {
 				movie={{
 					title: 'Movie Title',
 					poster_path: '/movie_poster.jpg',
-					popularity: 100,
+					popularity: 80,
 				}}
 			/>
 		);
 
 		const title = screen.getByTestId('movie-poster-card-title');
 		const poster = screen.getByTestId('movie-poster-card-poster');
-		const pop = screen.getByTestId('movie-poster-card-popularity');
+		const chart = screen.getByTestId('movie-score-chart');
 
 		expect(title).toBeInTheDocument();
 		expect(title).toHaveTextContent('Movie Title');
@@ -25,7 +25,7 @@ describe('MoviePosterCard', () => {
 			'src',
 			'https://image.tmdb.org/t/p/w500/movie_poster.jpg'
 		);
-		expect(pop).toBeInTheDocument();
-		expect(pop).toHaveTextContent('100%');
+		expect(chart).toBeInTheDocument();
+		expect(chart).toHaveAttribute('data-score', '80');
 	});
 });

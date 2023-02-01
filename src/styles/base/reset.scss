@@ -152,6 +152,7 @@ strong {
 *,
 *::before,
 *::after {
+	position: relative;
 	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
 }

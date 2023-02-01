@@ -30,8 +30,17 @@ img {
 }
 
 .title {
-	font-size: 1.8rem;
-	line-height: 1.8rem;
-	font-weight: 700;
-	margin-bottom: 8px;
+	font-family: Staatliches, "DM Sans", sans-serif;
+	font-size: 2.4rem;
+	line-height: 2.4rem;
+	font-weight: normal;
+	margin-top: 22px;
+}
+
+.popularity {
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	top: -44px;
+	transform: translate(-50%, 0);
 }

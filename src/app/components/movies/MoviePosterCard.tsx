@@ -1,6 +1,7 @@
 import React from 'react';
 import { Movie } from '@root/api/types';
 import module from './MoviePosterCard.module.scss';
+import MovieScoreChart from './MovieScoreChart';
 
 export type MoviePosterProps = {
 	className?: string;
@@ -26,11 +27,9 @@ function MoviePosterCard(props: MoviePosterProps) {
 					className={module.title}>
 					{movie.title}
 				</h3>
-				<p
-					data-testid="movie-poster-card-popularity"
-					className={module.popularity}>
-					{Math.floor(movie.popularity)}%
-				</p>
+				<div className={module.popularity}>
+					<MovieScoreChart score={movie.popularity} />
+				</div>
 			</div>
 		</div>
 	);
