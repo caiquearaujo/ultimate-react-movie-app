@@ -27,8 +27,6 @@ body {
 	background: $white;
 	color: $black;
 	position: relative;
-	overflow-x: hidden;
-	display: table;
 }
 
 /** Scroll bar **/
@@ -45,66 +43,5 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-	background-color: $white;
-}
-
-h1 {
-	font-size: 4.2rem;
-	font-weight: 600;
-	line-height: 4.8rem;
-}
-
-h2 {
-	font-size: 3.6rem;
-	font-weight: 600;
-	line-height: 4.2rem;
-}
-
-h3 {
-	font-size: 3rem;
-	font-weight: 600;
-	line-height: 3.6rem;
-}
-
-h4 {
-	font-size: 2.4rem;
-	font-weight: 600;
-	line-height: 3rem;
-}
-
-h5 {
-	font-size: 1.8rem;
-	font-weight: 600;
-	line-height: 2.4rem;
-}
-
-h6 {
-	font-size: 1.6rem;
-	font-weight: 600;
-	line-height: 1.8rem;
-}
-
-p {
-	font-size: 1.6rem;
-	font-weight: 400;
-	line-height: 2.4rem;
-}
-
-main {
-	padding: 24px;
-	width: 100%;
-	max-width: 1280px;
-	margin: 72px auto;
-}
-
-input,
-textarea,
-select {
-	font-family: $font-family;
-}
-
-@media screen and (max-width: 780px) {
-	html {
-		font-size: 9px;
-	}
+	background-color: $black;
 }

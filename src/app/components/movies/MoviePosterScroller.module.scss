@@ -1,14 +1,61 @@
 $child-spacing: 16px;
+$background-merge: linear-gradient(
+	90deg,
+	rgb(255 255 255 / 0%) 0%,
+	rgb(255 255 255 / 50%) 100%
+);
+
+.wrapper {
+	max-width: 1280px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+
+	&::before {
+		content: "";
+		width: 120px;
+		height: 100%;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 10;
+		background: rgb(255 255 255);
+		background: $background-merge;
+		user-select: none;
+		pointer-events: none;
+	}
+}
+
+.container {
+	display: flex;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	width: 100%;
+	-webkit-overflow-scrolling: touch;
+	padding: $child-spacing 0;
+
+	&::-webkit-scrollbar-track {
+		background-color: #f5f5f5;
+	}
+
+	&::-webkit-scrollbar {
+		width: 3px;
+		height: 3px;
+		background-color: #f5f5f5;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: #a0f;
+	}
+}
 
 .scroller {
 	display: flex;
-	flex-direction: row;
-	overflow-x: auto;
-	overflow-y: hidden;
+	flex: 0 0 auto;
+	justify-content: center;
 	-webkit-overflow-scrolling: touch;
-	padding: $child-spacing;
 
 	.child {
+		flex: 0 0 auto;
 		margin-left: $child-spacing;
 
 		&:first-child {

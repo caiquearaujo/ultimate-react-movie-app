@@ -16,4 +16,11 @@ const solveScore = (_score: number): [number, string, string] => {
 	return [score, '#4d0f0f', '#d23131'];
 };
 
-export default { solveScore };
+const sleep = (ms = 2000): Promise<void> => {
+	console.log('Kindly remember to remove `sleep`');
+	return new Promise<void>(resolve => {
+		setTimeout(() => resolve(), ms);
+	});
+};
+
+export default { solveScore, sleep };
