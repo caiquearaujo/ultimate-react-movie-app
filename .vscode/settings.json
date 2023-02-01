@@ -1,5 +1,4 @@
 {
-	"editor.fontSize": 14,
 	"stylelint.autoFixOnSave": true,
 	"[javascript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
