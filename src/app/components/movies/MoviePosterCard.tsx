@@ -3,14 +3,17 @@ import { Movie } from '@root/api/types';
 import module from './MoviePosterCard.module.scss';
 
 export type MoviePosterProps = {
+	className?: string;
 	movie: Pick<Movie, 'title' | 'poster_path' | 'popularity'>;
 };
 
 function MoviePosterCard(props: MoviePosterProps) {
-	const { movie } = props;
+	const { movie, className = '' } = props;
 
 	return (
-		<div data-testid="movie-poster-card-comp" className={module.card}>
+		<div
+			data-testid="movie-poster-card-comp"
+			className={`${module.row} ${className}`}>
 			<div className={`${module.row} ${module.poster}`}>
 				<img
 					data-testid="movie-poster-card-poster"

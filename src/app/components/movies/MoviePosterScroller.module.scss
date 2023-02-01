@@ -1,0 +1,18 @@
+$child-spacing: 16px;
+
+.scroller {
+	display: flex;
+	flex-direction: row;
+	overflow-x: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	padding: $child-spacing;
+
+	.child {
+		margin-left: $child-spacing;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
