@@ -1,7 +1,7 @@
 export default {
 	rootDir: '.',
-	roots: ['<rootDir>/src'],
-	testMatch: ['**/src/*spec.+(ts|tsx)'],
+	roots: ['<rootDir>/src', '<rootDir>/test'],
+	testMatch: ['**/test/**/*.spec.{ts,tsx}'],
 	collectCoverage: true,
 	collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', '!src/**/*.d.ts'],
 	coverageThreshold: {
@@ -25,16 +25,20 @@ export default {
 			{
 				diagnostics: false,
 				tsconfig: 'tsconfig.json',
+				isolatedModules: false,
 			},
 		],
 	},
 	preset: 'ts-jest',
 	transformIgnorePatterns: ['<rootDir>/node_modules/'],
 	testEnvironment: 'jsdom',
+	moduleFileExtensions: ['ts', 'tsx', 'js'],
 	moduleNameMapper: {
 		'@root/(.*)': '<rootDir>/src/$1',
+		'@test/(.*)': '<rootDir>/test/$1',
+		'\\.(scss|sass|css)$': 'identity-obj-proxy',
 	},
-	moduleDirectories: ['node_modules', '<rootDir>/src'],
 	extensionsToTreatAsEsm: ['.ts', '.tsx'],
-	setupFilesAfterEnv: ['<rootDir>/tests/setup.ts'],
+	moduleDirectories: ['node_modules', '<rootDir>/src'],
+	setupFilesAfterEnv: ['<rootDir>/test/setup.ts'],
 };

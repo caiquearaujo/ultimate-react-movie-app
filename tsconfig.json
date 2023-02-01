@@ -14,13 +14,48 @@
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"noEmit": true,
-		"jsx": "react-jsx",
 		"paths": {
 			"@root/*": [
 				"./src/*",
 			],
+			"@test/*": [
+				"test/*",
+			],
 		},
+		"declaration": true,
+		"declarationDir": "./build/types",
+		"noUnusedLocals": true,
+		"noUnusedParameters": false,
+		"importHelpers": true,
+		"experimentalDecorators": true,
+		"sourceMap": true,
+		"baseUrl": ".",
+		"rootDir": ".",
+		"outDir": "./build",
+		"plugins": [
+			{
+				"transform":"@zerollup/ts-transform-paths",
+				"exclude": ["*"]
+			}
+		],
+		"typeRoots": [
+			"<rootDir>/src/types",
+			"node_modules/@types"
+		],
+		"types": [
+			"node",
+			"jest"
+		],
+		"jsx": "react-jsx",
 	},
-	"include": ["src"],
+	"include": [
+		"./src/**/*",
+		"./debug/**/*",
+		"./test/**/*"
+	],
+	"exclude": [
+		"./node_modules/**/*",
+		"./build/**/*",
+	],
 	"references": [{ "path": "./tsconfig.node.json" }]
 }

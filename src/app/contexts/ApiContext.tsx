@@ -6,7 +6,7 @@ const ApiContext = createContext<Api | null>(null);
 
 function ApiProvider({ children }: React.PropsWithChildren) {
 	const axios = AxiosFactory.create({
-		baseURL: 'http://192.168.0.11/api',
+		baseURL: 'http://192.168.0.11:8080/api',
 	});
 
 	const api = new Api(axios);

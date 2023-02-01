@@ -5,7 +5,7 @@ import { ApiProvider } from '@root/app/contexts/ApiContext';
 function App() {
 	return (
 		<ApiProvider>
-			<h1>Hello world</h1>
+			<h1>Hello, world!</h1>
 		</ApiProvider>
 	);
 }
